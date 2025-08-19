@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:pocket_tasks_mini/ui/screens/task_home.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const PocketTasksApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class PocketTasksApp extends StatelessWidget {
+  const PocketTasksApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+    return MaterialApp(
+      title: 'Pocket Tasks Mini',
+      theme: ThemeData(
+        primarySwatch: Colors.deepPurple,
+        fontFamily: 'Times New Roman',
       ),
+      debugShowCheckedModeBanner: false,
+      home: const TaskHome(),
     );
   }
 }
